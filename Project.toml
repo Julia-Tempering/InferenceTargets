@@ -3,8 +3,24 @@ uuid = "c783b089-9926-4030-92a9-5158851e9169"
 authors = ["Alexandre Bouchard"]
 version = "1.0.0-DEV"
 
+[deps]
+
+
+[weakdeps]
+BridgeStan = "c88b6f0a-829e-4b0b-94b7-f06ab5908f5a"
+Pigeons = "0eb8d820-af6a-4919-95ae-11206f830c31"
+DynamicPPL = "366bfd00-2699-11ea-058f-f148b4cae6d8"
+
+[extensions]
+InferenceTargetsBridgeStanExt = ["Pigeons", "BridgeStan"]
+InferenceTargetsDynamicPPLExt = ["Pigeons", "DynamicPPL"]
+InferenceTargetsPigeonsExt = "Pigeons"
+
 [compat]
-julia = "1.6.7"
+BridgeStan = "2"
+DynamicPPL = "0.35"
+Pigeons = "0.4"
+julia = "1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
