@@ -6,6 +6,6 @@ include("utils.jl")
 include("api.jl")
 include("targets_registry.jl")
 
-export find_targetIds, build_target_from_module
+export find_targetIds, load_target
 
 end

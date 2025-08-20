@@ -4,7 +4,7 @@ function call(m::Module, function_name::Symbol, args...)
 end
 
 function extract_targetIds_from_methods(m::Module)
-    f = getfield(m, :build_target)
+    f = getfield(m, :provide_target)
     result = Val[]
     for method in methods(f).ms
         sig = method.sig

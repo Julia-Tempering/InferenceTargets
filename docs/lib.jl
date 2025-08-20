@@ -99,7 +99,7 @@ function generate_registry_page(package::Symbol, specs)
 
     ```@example $package
     some_id = ids[1]
-    build_target_from_module($package, some_id)
+    load_target($package, some_id)
     ```
 
     ## Summary 
