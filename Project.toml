@@ -1,29 +1,14 @@
 name = "InferenceTargets"
 uuid = "c783b089-9926-4030-92a9-5158851e9169"
 authors = ["Alexandre Bouchard"]
-version = "1.0.0-DEV"
+version = "0.0.1"
 
 [deps]
-
-
-[weakdeps]
-BridgeStan = "c88b6f0a-829e-4b0b-94b7-f06ab5908f5a"
-Pigeons = "0eb8d820-af6a-4919-95ae-11206f830c31"
-DynamicPPL = "366bfd00-2699-11ea-058f-f148b4cae6d8"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Tables = "bd369af6-aec1-5ad0-b16a-f7cc5008161c"
 
 [extensions]
-InferenceTargetsBridgeStanExt = ["Pigeons", "BridgeStan"]
-InferenceTargetsDynamicPPLExt = ["Pigeons", "DynamicPPL"]
-InferenceTargetsPigeonsExt = "Pigeons"
 
 [compat]
-BridgeStan = "2"
-DynamicPPL = "0.35"
-Pigeons = "0.4"
-julia = "1"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
+Pkg = "1.11"
+Tables = "1.12"

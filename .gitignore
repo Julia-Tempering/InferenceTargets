@@ -1,1 +1,7 @@
 /Manifest*.toml
+Manifest.toml
+package-lock.json
+package.json
+docs/build
+docs/node_modules
+docs/src/generated
