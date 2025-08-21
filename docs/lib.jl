@@ -89,11 +89,15 @@ function generate_registry_page(package::Symbol, specs)
 
     package_spec = InferenceTargets.registry[:$package]
     Pkg.add(package_spec)
-
     using $package 
+    ```
 
+    ## Repository information 
+
+    ```@example $package
     package_spec
     ```
+
 
     ## Usage
 
@@ -111,17 +115,29 @@ function generate_registry_page(package::Symbol, specs)
     load_target($package, some_id)
     ```
 
-    ## Summary 
-
-    ### Successfully loaded 
-
+    ## Summary
+    
     ```@example $package 
     using Markdown, PrettyTables 
     success, errored = InferenceTargets.summary_table($package)
+    nothing #hide
+    ```
+
+    ### Successfully loaded targets
+
+    ```@example $package 
+    length(success)
+    ```
+
+    ```@example $package 
     pretty_table(HTML, success; backend = Val(:html), show_subheader=false)
     ```
 
-    ### Errored
+    ### Errored targets
+
+    ```@example $package 
+    length(errored)
+    ```
 
     ```@example $package 
     pretty_table(HTML, errored; backend = Val(:html), show_subheader=false)

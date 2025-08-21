@@ -13,7 +13,7 @@ find_targetIds(m::Module) =
     if isdefined(m, :provide_targetIds)
         result = call(m, :provide_targetIds)
         @assert is_targetId(eltype(result)) "Not a valid targetId: $(eltype(result)), $(is_targetId(eltype(result)))"
-        result
+        return collect(result)
     else
         extract_targetIds_from_methods(m)
     end
