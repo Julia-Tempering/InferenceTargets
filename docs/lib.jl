@@ -51,7 +51,7 @@ function build(for_preview::Bool = false)
         makedocs_args_for_preview...
     )
 
-    if !preview 
+    if !for_preview 
         DocumenterVitepress.deploydocs(;
             repo,
             devbranch = "main",
