@@ -34,13 +34,13 @@ import{_ as i,c as a,o as e,aA as n}from"./chunks/framework.D7a-xEaM.js";const o
 <span class="line"><span style="--shiki-light:#959da5;--shiki-dark:#959da5;">  [b301fa66] </span><span style="--shiki-light:#22863a;--shiki-dark:#85e89d;">+ TuringPigeonsExamples v0.1.0 \`https://github.com/Julia-Tempering/TuringPigeonsExamples#0b09109\`</span></span>
 <span class="line"><span style="--shiki-light:#1b7c83;--shiki-light-font-weight:bold;--shiki-dark:#39c5cf;--shiki-dark-font-weight:bold;">        Info</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;"> Packages marked with </span><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">⌃</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;"> and </span><span style="--shiki-light:#dbab09;--shiki-dark:#ffea7f;">⌅</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;"> have new versions available. Those with </span><span style="--shiki-light:#28a745;--shiki-dark:#34d058;">⌃</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;"> may be upgradable, but those with </span><span style="--shiki-light:#dbab09;--shiki-dark:#ffea7f;">⌅</span><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;"> are restricted by compatibility constraints from upgrading. To see why use \`status --outdated -m\`</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">Precompiling project...</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   2832.3 ms  ✓ Bijectors</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   7667.3 ms  ? BlangTargets</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   7861.8 ms  ✓ DynamicPPL</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   1767.5 ms  ✓ DynamicPPL → DynamicPPLChainRulesCoreExt</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   5032.3 ms  ✓ Pigeons → PigeonsDynamicPPLExt</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   5322.2 ms  ✓ TuringPigeonsExamples</span></span>
-<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">  5 dependencies successfully precompiled in 22 seconds. 220 already precompiled.</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   2690.1 ms  ✓ Bijectors</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   7478.0 ms  ? BlangTargets</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   7810.3 ms  ✓ DynamicPPL</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   1319.3 ms  ✓ DynamicPPL → DynamicPPLChainRulesCoreExt</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   4890.7 ms  ✓ Pigeons → PigeonsDynamicPPLExt</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">   5151.3 ms  ✓ TuringPigeonsExamples</span></span>
+<span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">  5 dependencies successfully precompiled in 21 seconds. 223 already precompiled.</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">  1 dependency precompiled but a different version is currently loaded. Restart julia to access the new version. Otherwise, loading dependents of this package may trigger further precompilation to work with the unexpected version.</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">  1 dependencies failed but may be precompilable after restarting julia</span></span>
 <span class="line"><span style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;">  1 dependency had output during precompilation:</span></span>
