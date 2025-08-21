@@ -10,14 +10,6 @@ using Literate
 
 using PrettyTables
 
-## TODO: remove!!!
-
-Pkg.add(PackageSpec(url = "https://github.com/Julia-Tempering/BlangTargets", rev = "8c279e01b7d83e4d6bf4f108e7a05f24e4a903c2"))
-using BlangTargets
-@show find_targetIds(BlangTargets)
-success, errored = InferenceTargets.summary_table(BlangTargets)
-
-##
 
 function build(for_preview::Bool = false)
 
@@ -32,12 +24,6 @@ function build(for_preview::Bool = false)
         flavor = Literate.DocumenterFlavor())
 
     registry_pages = generate_registry_pages()
-
-    ### TODO: remove
-
-    
-
-    ####
 
     makedocs_args_for_preview = for_preview ? 
         (; clean = false) :
