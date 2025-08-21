@@ -28,7 +28,7 @@ function build(for_preview::Bool = false)
         (; clean = false) :
         (;)
 
-    repo = "https://github.com/Julia-Tempering/InferenceTargets"
+    repo = "https://github.com/Julia-Tempering/InferenceTargets" 
 
     makedocs(;
         modules = [InferenceTargets], 
