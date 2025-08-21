@@ -10,6 +10,7 @@ using Literate
 
 using PrettyTables
 
+
 function build(for_preview::Bool = false)
 
     generated = "$work_dir/src/generated"
@@ -21,6 +22,7 @@ function build(for_preview::Bool = false)
     Literate.markdown(
         "$work_dir/README.jl", generated; 
         flavor = Literate.DocumenterFlavor())
+    mv("$generated/README.md", "$work_dir/src/index.md")
 
     registry_pages = generate_registry_pages()
 
@@ -44,7 +46,7 @@ function build(for_preview::Bool = false)
             )
         ,
         pages=[
-            "Overview" => "generated/README.md",
+            "Overview" => "index.md",
             "Reference" => "reference.md",
             "Registry" => collect(registry_pages)
         ],
@@ -58,6 +60,9 @@ function build(for_preview::Bool = false)
             push_preview = true
         )
     end
+
+    # since it is generated, try to avoid leaving it around, someone could edit it and then lose their changes
+    rm("$work_dir/src/index.md")
 
 end
 
@@ -80,6 +85,11 @@ function generate_registry_page(package::Symbol, specs)
     return """
     # `$package` － Targets collection
 
+    ```@setup $package
+    # To debug CI progress
+    @info "Processing documentation for $package"
+    ```
+
     ## Setup instructions
 
     To setup `$package`:
@@ -90,6 +100,7 @@ function generate_registry_page(package::Symbol, specs)
     package_spec = InferenceTargets.registry[:$package]
     Pkg.add(package_spec)
     using $package 
+    nothing #hide
     ```
 
     ## Repository information 
