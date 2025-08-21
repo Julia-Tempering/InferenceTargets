@@ -68,11 +68,11 @@ end
 
 function generate_registry_pages()
     result = Dict{String, String}() 
-    for (package_symbol, specs) in pairs(InferenceTargets.registry)
-        page_contents = generate_registry_page(package_symbol, specs) 
-        write("$work_dir/src/generated/$package_symbol.md", page_contents)
-        result[string(package_symbol)] = "generated/$package_symbol.md"
-    end
+    # for (package_symbol, specs) in pairs(InferenceTargets.registry)
+    #     page_contents = generate_registry_page(package_symbol, specs) 
+    #     write("$work_dir/src/generated/$package_symbol.md", page_contents)
+    #     result[string(package_symbol)] = "generated/$package_symbol.md"
+    # end
     return result
 end
 
