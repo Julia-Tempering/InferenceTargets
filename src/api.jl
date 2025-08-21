@@ -51,12 +51,12 @@ function summary_table(m::Module)
         try
             target = load_target(m, id)
             push!(success, (;
-                targetId = string(id), 
+                targetId = as_symbol(id), 
                 type = string(typeof(target))
             ))
         catch e 
             push!(errored, (;
-                targetId = string(id), 
+                targetId = as_symbol(id), 
                 error = string(e)
             ))
         end
