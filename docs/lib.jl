@@ -55,11 +55,10 @@ function build(for_preview::Bool = false)
         DocumenterVitepress.deploydocs(;
             repo,
             devbranch = "main",
-            push_preview = true,
+            push_preview = true
         )
     end
-)
-    end
+
 end
 
 function clean_gensyms(str)
