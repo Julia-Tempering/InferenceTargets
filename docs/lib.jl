@@ -28,7 +28,7 @@ function build(for_preview::Bool = false)
         (; clean = false) :
         (;)
 
-    repo = "https://github.com/Julia-Tempering/InferenceTargets" 
+    repo = "github.com/Julia-Tempering/InferenceTargets" 
 
     makedocs(;
         modules = [InferenceTargets], 
@@ -50,6 +50,16 @@ function build(for_preview::Bool = false)
         ],
         makedocs_args_for_preview...
     )
+
+    if !preview 
+        DocumenterVitepress.deploydocs(;
+            repo,
+            devbranch = "main",
+            push_preview = true,
+        )
+    end
+)
+    end
 end
 
 function clean_gensyms(str)
