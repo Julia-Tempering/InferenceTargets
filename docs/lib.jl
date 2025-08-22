@@ -109,7 +109,7 @@ function generate_registry_page(package::Symbol, specs)
     package_spec = InferenceTargets.registry[:$package]
     Pkg.add(package_spec)
     using $package 
-    nothing #hide
+    nothing # hide
     ```
 
     ## Repository information 
@@ -140,7 +140,7 @@ function generate_registry_page(package::Symbol, specs)
     ```@example $package 
     using Markdown, PrettyTables 
     success, errored = InferenceTargets.summary_table($package)
-    nothing #hide
+    nothing # hide
     ```
 
     ### Successfully loaded targets
