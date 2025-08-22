@@ -5,3 +5,5 @@ package.json
 docs/build
 docs/node_modules
 docs/src/generated
+docs/Project.toml
+docs/src/index.md
