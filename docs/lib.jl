@@ -3,13 +3,22 @@ work_dir = @__DIR__
 using Pkg 
 Pkg.activate(work_dir)
 
+project_root_dir = dirname(work_dir)
+Pkg.develop(PackageSpec(path=project_root_dir))
+
+# we need to do this since we don't want to commit the Project.toml 
+# because we add non-registered packages as we go, and this would 
+# be easy to accidentally commit those changes. In turn they cause 
+# crash in CI. 
+for pkg in ["Documenter", "DocumenterVitepress", "Literate", "PrettyTables"]
+    Pkg.add(pkg)
+end
+
 using Documenter 
 using DocumenterVitepress
 using InferenceTargets 
 using Literate
-
 using PrettyTables
-
 
 function build(for_preview::Bool = false)
 
@@ -136,9 +145,6 @@ function generate_registry_page(package::Symbol, specs)
 
     ### Successfully loaded targets
 
-    ```@example $package 
-    length(success)
-    ```
 
     ```@example $package 
     pretty_table(HTML, success; backend = Val(:html), show_subheader=false)
@@ -146,9 +152,6 @@ function generate_registry_page(package::Symbol, specs)
 
     ### Errored targets
 
-    ```@example $package 
-    length(errored)
-    ```
 
     ```@example $package 
     pretty_table(HTML, errored; backend = Val(:html), show_subheader=false)
