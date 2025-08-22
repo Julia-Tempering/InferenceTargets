@@ -28,8 +28,8 @@ end
     find_targetIds() 
 
 Query all loaded modules. Create a dictionary, 
-where the keys are the modules `m` that are target collections, 
-and the value is the result of `find_targetIds(m)`. 
+where each key is a modules `m` that is a target collections, 
+and the corresponding value is the result of `find_targetIds(m)`. 
 """
 function find_targetIds()
     result = Dict{Module, Any}()
