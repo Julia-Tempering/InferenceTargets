@@ -20,6 +20,11 @@ using InferenceTargets
 using Literate
 using PrettyTables
 
+for (registry_key, spec) in InferenceTargets.registry 
+    @show registry_key
+    Pkg.add(spec)
+end
+
 function build(for_preview::Bool = false)
 
     generated = "$work_dir/src/generated"
@@ -44,7 +49,6 @@ function build(for_preview::Bool = false)
     makedocs(;
         modules = [InferenceTargets], 
         sitename = "InferenceTargets.jl",
-        warnonly = true,
         format = for_preview ? 
             DocumenterVitepress.MarkdownVitepress(;
                 repo,
