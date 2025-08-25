@@ -14,16 +14,16 @@ for pkg in ["Documenter", "DocumenterVitepress", "Literate", "PrettyTables"]
     Pkg.add(pkg)
 end
 
-using Documenter 
-using DocumenterVitepress
 using InferenceTargets 
-using Literate
-using PrettyTables
-
 for (registry_key, spec) in InferenceTargets.registry 
     @show registry_key
     Pkg.add(spec)
 end
+
+using Literate
+using PrettyTables
+using Documenter 
+using DocumenterVitepress
 
 function build(for_preview::Bool = false)
 
